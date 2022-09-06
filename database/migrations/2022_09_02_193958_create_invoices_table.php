@@ -21,7 +21,7 @@ return new class extends Migration
             $table->foreignId('receiver_id')->comment('Receptor de la factura')->references('id')->on('receivers');
             $table->double('subtotal')->comment('valor antes de iva');
             $table->double('iva')->comment('valor antes de iva');
-            $table->double('total')->comment('valor total a pagar');
+            $table->double('total')->default(0)->comment('valor total a pagar');
             $table->timestamps();
         });
     }

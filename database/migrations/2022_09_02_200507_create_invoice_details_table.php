@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description')->comment('Descripción del item');
             $table->double('quantity')->comment('Cantidad del item');
             $table->double('unit_price')->comment('Precio unitario del item');
-            $table->double('total')->comment('Valor total de los items');
+            $table->double('total')->default(0)->comment('Valor total de los items');
             $table->timestamps();
         });
     }
