@@ -13,6 +13,7 @@ Se deben correr los siguientes comando para poder correr el proyecto
 
 ```bash
 composer install
+./vendor/bin/sail up 
 php artisan migrate --seed
 php artisan jwt:secret
 ```
